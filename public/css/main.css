@@ -1,0 +1,193 @@
+
+main{
+    width: 100%;
+    display: block;
+    height: 100%;
+    background: #ffffff;
+    width: 100%;
+    overflow: auto;
+}
+.titles
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:60px;
+    margin: 20px 0px 20px 0px;
+    background: rgb(209, 252, 214);
+}
+.titles2
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:60px;
+    margin: 20px 0px 20px 0px;
+    background: rgb(252, 145, 145);
+}
+/* .main-header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 20px;
+    background: #4400ff;
+    height: 40px;
+} */
+.main-content .panel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin: 10px ;
+}
+
+.panel-row{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 20px;
+text-decoration: none;
+}
+.panel-row a{
+    padding-right: 10px;
+    width: 15%;
+    text-decoration: none;
+ }
+
+.panel-50{ 
+    width: 15%;
+    text-decoration: none;
+}
+
+.panel-50 a{
+    text-decoration: none;
+}
+.panel-row a button{
+    border: none;
+    text-decoration: none;
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(135deg,#6e8efb,#a777e3);
+    color:#fff;
+}
+.panel-row a button i{
+    padding: 10px;
+}
+
+.panel-row a button:hover {
+    text-decoration: none;
+    transform:scale(1.05);
+    transition:0.2s;
+}
+
+.ajax-content{
+   background: blue;
+    margin-top: 20px;
+}
+.painel-show::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+.painel-show::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.painel-show::-webkit-scrollbar-thumb
+{
+	background-color: #0ae;
+	
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+	                   color-stop(.5, rgba(255, 255, 255, .2)),
+					   color-stop(.5, transparent), to(transparent));
+}
+mainc
+{
+    overflow: auto;
+    display: block;
+    height: 100%;
+    /* background: linear-gradient(135deg,#ffffff,#949090cb); */
+    background: #f8f8f8;
+    /* background: linear-gradient(135deg,rgb(255, 255, 255),#b7a8f7); */
+   
+}
+
+mainc .main-cad-cadastro{
+    width: 100%;
+    height:calc(100% - 75px);
+    overflow: auto;
+    }
+    
+.panel-cad-cadastro{
+    width: 100%;
+    padding-right: 10px;
+text-decoration: none;
+}
+.butons
+{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.end
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.form-row
+{
+    padding: 10px;
+}
+/* .main-cad-view
+{
+   
+} */
+.main-cad-filho
+{
+    display: none;
+}
+.filho2
+{
+    display: none;
+}
+.login
+{
+    width: 100%;
+    height: 100%;
+}
+.painel-login
+{
+    background-image: url("/img/photo1.png");
+    background-color: #cccccc;
+    display: flex;
+    padding: 150px;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.painel-login div.card
+{
+    width: 400px;
+    height:auto;
+}
+/* .panel-cad-cadastro input{
+    background: linear-gradient(135deg,#ffffff,#949090cb);
+}
+.panel-cad-cadastro select{
+    
+    background: linear-gradient(135deg,#ffffff,#949090cb);
+}
+.panel-cad-cadastro textarea{
+    background: linear-gradient(135deg,#ffffff,#949090cb);
+} */
+

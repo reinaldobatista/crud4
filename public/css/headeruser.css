@@ -1,0 +1,67 @@
+div.painel-image {
+    /* height:100%; */
+    width: 100%;
+}
+
+.painel-image headeruser {
+    height:100%;
+    width: 100%;
+    
+
+}
+
+mainuser{
+        list-style-type: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+}
+div.userpainel
+{
+    overflow: auto;
+}
+.products {
+    width: 100%;
+    float: left;
+    justify-content:space-between;
+    padding: 20px;
+    list-style-type: none;
+}
+div.products ul {
+    float: left;
+    width: 20%;
+    height: 350px;
+    border: 1px solid violet;
+    background-color: white;
+    /* width: 300px;
+    height: 320px;
+    background: white;
+    list-style-type: none;
+    border: 1px solid violet;
+    margin: 0px 5px 0px 5px; */
+}
+div.products ul li{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 15px;
+    width: 100%;
+}
+div.products ul li img{
+    height: 120px;
+ 
+}
+
+headeruser{
+    display: block;
+    list-style: none;
+}
+.painel-show
+{
+    height: 610px;
+    overflow:auto;
+}
+
+
