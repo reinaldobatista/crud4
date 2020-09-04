@@ -61,6 +61,7 @@ Route::post('/deposito/store', 'DepositoController@store')->name('store.deposito
 Route::delete('/deposito/destroy/{id}', 'DepositoController@destroy')->name('destroy.deposito');
 Route::any('/deposito/search','DepositoController@search')->name('deposito.search');
 Route::get('/deposito/FilterSelect/{id}', 'DepositoController@FilterSelect')->name('FilterSelect.deposito');
+Route::get('/deposito/FilterSelect/story/{id}', 'DepositoController@FilterSelectStory')->name('FilterSelectStory.deposito');
 
 // Rotas User
 Route::get('/user/index', 'UserController@index')->name('index.user');
@@ -92,6 +93,7 @@ Route::post('/financeiro/store', 'FinanceiroController@store')->name('store.fina
 Route::delete('/financeiro/destroy/{id}', 'FinanceiroController@destroy')->name('destroy.financeiro');
 Route::any('/financeiro/search','FinanceiroController@search')->name('financeiro.search');
 Route::any('/financeiro/search/baixa','FinanceiroController@searchbaixa')->name('financeiro.searchbaixa');
+
 
 // Rotas Report
 Route::get('/relatorio/indexuser', 'JasperReportController@indexUser')->name('report.indexuser');

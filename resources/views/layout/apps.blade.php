@@ -170,7 +170,7 @@
           <div class="float-right d-none d-sm-block">
             <b>Version</b> 0.0.1
           </div>
-          <strong> &copy; 2020  <a href="http://adminlte.io">MY crud</a>.</strong> Todos os Direitos
+          <strong> &copy; 2020  <a href="#">MY crud</a>.</strong> Todos os Direitos
           Reservados
         </footer>
         

@@ -101,13 +101,67 @@ class DepositoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function FilterSelect(Request $request, $id){
+    public function FilterSelect(Request $request, $id)
+    {
         if($request->ajax()){
             $product=$this->repository->find($id);
             $towns[]=$this->repositorycategory->find($product->category_id);
             }
             return response()->json($towns);
+    }
+    public function FilterSelectStory(Request $request, $id)
+    {
+        $products=$this->objProduct->all();
+        $depositos=$this->objDeposito->all();
+        $existe=0;
+        $ok=0;
+        if($request->ajax()){
+            $story=$this->repositorystory->find($id);
+            foreach ($depositos as $key => $deposito) {
+               if($deposito->story_id==$story->id)
+               {
+                    $deposito_storys[]=$deposito;
+                    $ok=1;
+               }
+            }
+            if($ok==0)
+            {
+                foreach ($products as $key => $product) {
+                    $towns[]=$product;
+                }
+            }
+            else
+            {
+                foreach ($deposito_storys as $key => $deposito_story) {
+                    foreach ($products as $key => $product) {
+                       if($product->id==$deposito_story->products_id)
+                       {
+                            $products_id[]=$product->id;
+                       }
+                    }
+                }
+                foreach ($products as $key => $product) {
+                    foreach ($products_id as $key => $product_id) {
+                        if($product->id==$product_id)
+                        {
+                            $existe=1;
+                        }
+                    }
+                    if($existe==1)
+                    {
+                        $existe=0;
+                    }
+                    else
+                    {
+                        $towns[]=$product;
+                       
+                    }
+                }
+                }
         }
+           
+            return response()->json($towns);
+    }
     /**
      * Show the form for editing the specified resource.
      *

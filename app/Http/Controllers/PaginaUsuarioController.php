@@ -234,6 +234,10 @@ class PaginaUsuarioController extends Controller
             return redirect()->back();
         }
         $data=$request->all();
+        if( $data['qtd']<=0)
+        {
+            $data['qtd']=1;
+        }
         $carrinho->update($data);
         return redirect()->back();
     }
@@ -288,6 +292,7 @@ class PaginaUsuarioController extends Controller
          $pedidoVenda=  $this->repositorypedidoVenda->find($id1);
             $id2=$pedidoVenda->getattributes();
             $id2['status_carrinho_id']=3;
+            $id2['status_pedido_venda_id']=4;
             $pedidoVenda->update( $id2);
         }
         

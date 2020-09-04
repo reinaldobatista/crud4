@@ -23,6 +23,14 @@
       </div> --}}
 
       <!-- Sidebar Menu -->
+      {{-- <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+            <input type="text" id="pesquisar" class="form-control" placeholder="Pesquisar..." autocomplete="off">
+            <span class="input-group-btn">
+                <button name="search" id="search-btn" class="btn btn-flat" autocomplete="off"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+      </form> --}}
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class

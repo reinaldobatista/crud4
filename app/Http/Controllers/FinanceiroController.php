@@ -180,6 +180,11 @@ class FinanceiroController extends Controller
             {
                 return redirect()->back()->with('error','Pedido ja faturado');
             }
+            if($pedido_venda->status_pedido_venda_id==4)
+            {
+                return redirect()->back()->with('error','Pedido Cancelado');
+            }
+           
         }
         foreach ($pedidoVendas as $key => $pedidoVenda) {
             if($pedidoVenda->numberPedido==$pedido_venda->numberPedido)
@@ -212,7 +217,6 @@ class FinanceiroController extends Controller
         $source = array('.', ',');
         $replace = array('', '.');
         $valor = str_replace($source, $replace, $request->valueTotal);
-        dd($valor);
         if ($request->description==null ||$request->valueTotal==null || $request->data_compra==null || $request->tipo==null )  
         {
             return redirect()->back()->with('error','Preencha todos os campos');

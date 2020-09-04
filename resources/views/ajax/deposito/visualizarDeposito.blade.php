@@ -266,12 +266,12 @@
                                                         <tbody>
                                                         <td>{{$deposito->id}}</td>
                                                         @php
-                                                          $product=$deposito->find($deposito->products_id)->relProduct;
+                                                          $product=$deposito->find($deposito->id)->relProduct;
                                                          @endphp
                                                         <td>{{$product->name}}</td>
                                                         <td>{{$deposito->qtd}}</td>
                                                         @php
-                                                        $category=$deposito->find($deposito->products_id)->relcategory;
+                                                        $category=$deposito->find($deposito->id)->relcategory;
                                                        @endphp
                                                         <td>{{$category->category}}</td>
                                                       

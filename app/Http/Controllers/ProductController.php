@@ -43,7 +43,7 @@ class ProductController extends Controller
     public function index()
     {
         $products=$this->objProduct->all();
-        $categorys=$this->repositorycategory;
+        $categorys=$this->objCategory->all();
         return view('ajax.produto.visualizarProduto', [
             'products'=>$products,
             'categorys'=>$categorys,

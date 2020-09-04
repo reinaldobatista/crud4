@@ -180,6 +180,10 @@ text-decoration: none;
     width: 400px;
     height:auto;
 }
+/* .active
+{
+    background: coral;
+} */
 /* .panel-cad-cadastro input{
     background: linear-gradient(135deg,#ffffff,#949090cb);
 }

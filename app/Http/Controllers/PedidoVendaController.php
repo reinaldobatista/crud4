@@ -10,6 +10,7 @@ use App\Http\Models\ModelProduct;
 use App\Http\Models\ModelStory;
 use App\User;
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Foreach_;
 
 class PedidoVendaController extends Controller
 {
@@ -123,6 +124,27 @@ class PedidoVendaController extends Controller
         $categorys= ModelCategory::paginate(10);
         $products=$this->objProduct->all();
         $pedidoVendas=$this->objPedidovenda->all();
+        foreach ($pedidoVendas as $key => $pedido) {
+            if($pedido->numberPedido==$number)
+            {
+                if($pedido->status_pedido_venda_id==1)
+                {
+                    return redirect()->back()->with( 'error', 'Pedido de venda ainda Não foi pago!' );  
+                }
+                if($pedido->status_pedido_venda_id==3)
+                {
+                    return redirect()->back()->with( 'error', 'Ja foi feita requisição desse pedido!' );
+                }
+                if($pedido->status_pedido_venda_id==4)
+                {
+                    return redirect()->back()->with( 'error', 'Pedido de venda Cancelado!');
+                }
+                if($pedido->status_pedido_venda_id==5)
+                {
+                    return redirect()->back()->with( 'error', 'Pedido de venda ja foi finalizado!' ); 
+                }
+            }
+        }
         return view('ajax.pedidoVenda.editVendasOnline', [
             'products'=>$products,
             'storys'=>$storys,

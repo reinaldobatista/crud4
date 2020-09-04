@@ -222,7 +222,16 @@
                                   </div>
                                   <div class="form-group col-md-6">
                                     <label for=""> Categoria:</label>
-                                    <input type="text" name="filter1" class="form-control" value="{{ $filters['filter1'] ?? ''}}">
+                                    <select class="form-control select text-center" name="filter1"  id="filter1" required><br>
+                                      @php
+                                          $category=$categorys->find($filters['filter1'] ?? "");
+                                      @endphp
+                                      <option  value="{{ $filters['filter1'] ?? ''}}">{{$category->category ?? 'Selecione a Categoria'}}</option>
+                                      @foreach($categorys as $category)
+                                          <option value="{{$category->id}}" >{{$category->category}}</option>
+                                      @endforeach
+                                    </select>
+                                    {{-- <input type="text" name="filter1" class="form-control" value="{{ $filters['filter1'] ?? ''}}"> --}}
                                     <div class="butons">
                                       <button type="submit" style="justify-content: flex-end" class="btn btn-success"> <i class="fas fa-search"></i> </button>
                                     </div>
@@ -281,7 +290,7 @@
                                             </td>
                                           </tr>
                                           <div class="modal fade" id="detalhes{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
+                                            <div class="modal-dialog modal-lg m-auto">
                                               <div class="modal-content">
                                                 <div class="modal-header bg-primary">
                                                   <h5 class="modal-title" id="exampleModalLabel">Detalhes do produto {{$product->name}}: </h5>
@@ -294,7 +303,7 @@
                                                     <fieldset disabled> 
                                                         <div class="form-row">
                                                           <div class="form-group col-md-6">
-                                                            <label>Id</label>
+                                                            <label>Código</label>
                                                           <input type="text" class="form-control"  value="{{$product->id}}">
                                                           </div>
                                                           <div class="form-group col-md-6">
@@ -302,9 +311,9 @@
                                                             <input type="text" class="form-control"  value="{{$product->name}}">
                                                           </div>
                                                         </div>
-                                                        <div class="form-group">
+                                                        <div class="form-group col-md-12">
                                                           <label >Descrição</label>
-                                                          <textarea name="description"cols="60" rows="10">{{$product->description}}</textarea>
+                                                          <textarea name="description" cols="105" rows="10">{{$product->description}}</textarea>
                                                           {{-- <input type="text" class="form-control" value="{{$product->description}}" > --}}
                                                         </div>
                                                         <div class="form-row">

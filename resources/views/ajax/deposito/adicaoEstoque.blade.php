@@ -230,9 +230,9 @@
                                     <div class="form-group col-md-6">
                                         <select class="form-control" name="products_id"  id="products_id">
                                             <option value="{{$product->name ?? ''}}">{{$product->name ?? 'Selecione o Produto'}}</option>
-                                            @foreach($products as $product)
+                                            {{-- @foreach($products as $product)
                                                 <option value="{{$product->id}}">{{$product->name}}</option>
-                                            @endforeach
+                                            @endforeach --}}
                                         </select>
                                         <div style="color: red ; background:rgb(233, 163, 163)"><small id="erro2"></small></div><br>
                                     </div>

@@ -120,7 +120,7 @@ class JasperReportController extends Controller
 
       $jasper->compile(storage_path('app/public').`/relatorio/$name.jrxml`)->execute();
         $jasper->process(
-           base_path("public/Relatorios/$name.jasper"),
+           base_path("public/Relatorios/$name.jrxml"),
             $output,
             array($extensao),
             array('descriptionName'=>"$filtro",

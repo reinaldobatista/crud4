@@ -76,6 +76,20 @@ function fetchContent(el) {
         
 
     })
+    $(document).ready(function(){
+        $("#story_id").on('change',event => {
+            $.get(`/deposito/FilterSelect/story/${event.target.value}`, function(res, sta){
+                $("#products_id").empty();
+                $("#products_id").append(`<option value=""> Selecione um Produto </option>`);
+                res.forEach(element => {
+                    console.log(element);
+                    $("#products_id").append(`<option value=${element.id}> ${element.name} </option>`);
+                });
+            });
+        });
+        
+
+    })
   
  
   
